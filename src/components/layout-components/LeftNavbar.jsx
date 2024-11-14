@@ -24,8 +24,8 @@ const LeftNavbar = () => {
               className={({ isActive }) =>
                 `${
                   isActive
-                    ? "text-white text-lg font-semibold px-7 py-3 rounded-lg bg-[#9538E2] text-center"
-                    : "text-lg font-base text-[#09080F80] px-7 py-3 rounded-lg bg-[#09080F05] text-center"
+                    ? "btn text-white text-lg font-semibold px-7 py-3 rounded-lg bg-[#9538E2] text-center"
+                    : "btn text-lg font-base text-[#09080F80] px-7 py-3 rounded-lg bg-[#09080F05] text-center"
                 }`
               }
             >
