@@ -34,7 +34,7 @@ const SingleNewsCard = (props = {}) => {
       />
 
       {/* Details */}
-      <p className="text-gray-700 text-sm mb-4">
+      <p className="text-gray-700 text-sm mb-4 pb-4 border-b-2">
         {news.details.slice(0, 150)}...{" "}
         <span className="text-primary">Read More</span>
       </p>
