@@ -43,14 +43,6 @@ const SingleNewsCard = (props = {}) => {
       <div className="flex items-center justify-between text-gray-600 text-sm">
         {/* Rating */}
         <div className="flex items-center">
-          {/* {[...Array(5)].map((_, i) => (
-            <AiFillStar
-              key={i}
-              className={`text-yellow-500 ${
-                i < Math.round(news.rating.number) ? "" : "opacity-50"
-              }`}
-            />
-          ))} */}
           <FaStar />
           <span className="ml-2 font-semibold">{news.rating.number}</span>
         </div>
