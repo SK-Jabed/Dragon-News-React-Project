@@ -17,7 +17,7 @@ const SingleNewsCard = (props = {}) => {
           <p className="font-semibold">{news.author.name}</p>
           <p className="text-sm text-gray-500">{news.author.published_date}</p>
         </div>
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-2">
           <FaRegBookmark className="cursor-pointer" />
           <FaShareAlt className="text-gray-600" />
         </div>
