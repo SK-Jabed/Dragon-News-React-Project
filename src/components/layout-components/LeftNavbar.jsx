@@ -17,9 +17,17 @@ const LeftNavbar = () => {
         <h2 className="text-lg font-semibold text-[#403F3F]">All Category</h2>
         <div className="flex flex-col justify-start gap-2 mt-3">
           {categories.map((category) => (
-            <NavLink to={`/category/${category.category_id}`}
+            <NavLink
+              to={`/category/${category.category_id}`}
               key={category.category_id}
-              className="btn"
+              //   className="btn"
+              className={({ isActive }) =>
+                `${
+                  isActive
+                    ? "text-white text-lg font-semibold px-7 py-3 rounded-lg bg-[#9538E2] text-center"
+                    : "text-lg font-base text-[#09080F80] px-7 py-3 rounded-lg bg-[#09080F05] text-center"
+                }`
+              }
             >
               {category.category_name}
             </NavLink>
