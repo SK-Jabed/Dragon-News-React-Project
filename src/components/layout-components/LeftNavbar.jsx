@@ -17,7 +17,7 @@ const LeftNavbar = () => {
         <h2 className="text-lg font-semibold text-[#403F3F]">All Category</h2>
         <div className="flex flex-col justify-start gap-2 mt-3">
           {categories.map((category) => (
-            <NavLink
+            <NavLink to={`/category/${category.category_id}`}
               key={category.category_id}
               className="btn"
             >
