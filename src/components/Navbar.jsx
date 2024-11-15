@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import userIcon from "../assets/user.jpg"
+import userIcon from "../assets/profile-user.png"
 
 const Navbar = () => {
     return (
