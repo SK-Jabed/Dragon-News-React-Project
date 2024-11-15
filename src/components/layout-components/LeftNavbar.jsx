@@ -10,8 +10,6 @@ const LeftNavbar = () => {
           .then((data) => setCategories(data.data.news_category));
     }, []);
 
-    // {category_id: '08', category_name: 'All News'}
-
     return (
       <div>
         <h2 className="text-lg font-semibold text-[#403F3F]">All Category</h2>
