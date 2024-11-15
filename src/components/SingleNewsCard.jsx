@@ -24,10 +24,8 @@ const SingleNewsCard = (props = {}) => {
           <IoShareSocialOutline className="" />
         </div>
       </div>
-
       {/* Title */}
       <h2 className="text-xl font-semibold mb-4">{news.title}</h2>
-
       {/* Thumbnail Image */}
       <img
         src={news.image_url}
