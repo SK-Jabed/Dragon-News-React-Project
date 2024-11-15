@@ -32,7 +32,6 @@ const SingleNewsCard = (props = {}) => {
         alt="Thumbnail"
         className="w-full  object-cover rounded-lg mb-8"
       />
-
       {/* Details */}
       <p className="text-[#706F6F] text-base font-medium mb-4 pb-5 border-b-2">
         {news.details.slice(0, 180)}...{" "}
@@ -40,7 +39,6 @@ const SingleNewsCard = (props = {}) => {
           Read More
         </span>
       </p>
-
       {/* Ratings and Views */}
       <div className="flex items-center justify-between text-gray-600 text-sm">
         {/* Rating */}
@@ -57,7 +55,6 @@ const SingleNewsCard = (props = {}) => {
             {news.rating.number}
           </span>
         </div>
-
         {/* Views */}
         <div className="flex items-center font-semibold text-lg text-[#706F6F]">
           <FaEye className="mr-2" />
