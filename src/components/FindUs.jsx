@@ -15,7 +15,7 @@ const FindUs = () => {
           <FaTwitter />
           Twitter
         </button>
-        <button className="btn join-item h-[4rem] justify-start py-4 text-[#D82D7E] items-center font-semibold text-lg">
+        <button className="btn join-item h-[4rem] justify-start py-4 text-[#b32567] items-center font-semibold text-lg">
           <FaSquareInstagram />
           Instagram
         </button>
