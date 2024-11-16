@@ -15,9 +15,19 @@ const Navbar = () => {
           <NavLink to={"/career"}>Career</NavLink>
         </div>
         <div className="login flex items-center gap-2">
-          <img className="w-[46px]" src={userIcon} alt="User Icon" />
           {user && user?.email ? (
-            <button onClick={logOut} className="btn rounded-none px-7 py-2 bg-[#403F3F] text-white text-lg font-semibold hover:text-black hover:bg-white">
+            <div>
+              <img className="w-[50px] h-[50px] rounded-full" src={user.photoURL} alt="User Icon" />
+            </div>
+          ) : (
+            <img className="w-[46px]" src={userIcon} alt="User Icon" />
+          )}
+
+          {user && user?.email ? (
+            <button
+              onClick={logOut}
+              className="btn rounded-none px-7 py-2 bg-[#403F3F] text-white text-lg font-semibold hover:text-black hover:bg-white"
+            >
               Logout
             </button>
           ) : (

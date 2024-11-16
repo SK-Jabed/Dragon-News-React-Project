@@ -22,7 +22,7 @@ const Register = () => {
     const email = form.get("email");
     const password = form.get("password");
 
-    console.log({name, photo, email, password});
+    // console.log({name, photo, email, password});
 
     
 
@@ -35,13 +35,13 @@ const Register = () => {
             navigate("/");
           })
           .catch((err => {
-            console.log(err);
+            // console.log(err);
           }))
       })
       .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        // console.log(errorCode, errorMessage);
       })
   }
 
