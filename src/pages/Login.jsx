@@ -1,10 +1,15 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
 
 
 const Login = () => {
     const { loginUser, setUser } = useContext(authContext);
+    const [error, setError] = useState({});
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    console.log(location);
 
     const handleSubmit = (e) => {
       e.preventDefault();
@@ -18,9 +23,10 @@ const Login = () => {
         .then(result => {
           const user = result.user;
           setUser(user);
+          navigate(location?.state ? location.state : "/");
         })
-        .catch(error => {
-          alert(error.message);
+        .catch(err => {
+          setError({...error, login:err.code});
         })
     }
 
@@ -60,6 +66,11 @@ const Login = () => {
                 </a>
               </label>
             </div>
+            {error.login && (
+              <label className="label text-base font-semibold text-red-600">
+                {error.login}               
+              </label>
+            )}
             <div className="form-control">
               <button className="btn btn-neutral rounded-md text-white font-semibold text-base">
                 Login
@@ -67,7 +78,10 @@ const Login = () => {
             </div>
           </form>
           <p className="text-center font-semibold text-[#706F6F]">
-            Dont’t Have An Account ? <Link to={"/auth/register"} className="text-red-500 font-bold">Register</Link>
+            Dont’t Have An Account ?{" "}
+            <Link to={"/auth/register"} className="text-red-500 font-bold">
+              Register
+            </Link>
           </p>
         </div>
       </div>

@@ -28,9 +28,9 @@ const NewsDetails = () => {
                 <div className="card-actions">
                   <Link
                     to={`/category/${news?.category_id}`}
-                    className="btn btn-primary"
+                    className="btn bg-[#D72050]"
                   >
-                    Back to Category
+                    All news in this category
                   </Link>
                 </div>
               </div>
