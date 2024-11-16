@@ -2,6 +2,7 @@ import { FaEye } from "react-icons/fa6";
 import { HiOutlineBookmark } from "react-icons/hi";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const SingleNewsCard = (props = {}) => {
   const { news } = props || {};
@@ -35,9 +36,9 @@ const SingleNewsCard = (props = {}) => {
       {/* Details */}
       <p className="text-[#706F6F] text-base font-medium mb-4 pb-5 border-b-2">
         {news.details.slice(0, 180)}...{" "}
-        <span className="text-orange-600 font-semibold cursor-pointer">
+        <Link to={`/news/${news._id}`} className="text-orange-600 font-semibold">
           Read More
-        </span>
+        </Link>
       </p>
       {/* Ratings and Views */}
       <div className="flex items-center justify-between text-gray-600 text-sm">
