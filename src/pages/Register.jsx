@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
 
-
 const Register = () => {
   const { createNewUser, setUser, updateUserProfile } = useContext(authContext);
   const [error, setError] = useState({});
@@ -23,8 +22,6 @@ const Register = () => {
     const password = form.get("password");
 
     // console.log({name, photo, email, password});
-
-    
 
     createNewUser(email, password) 
       .then(result => {

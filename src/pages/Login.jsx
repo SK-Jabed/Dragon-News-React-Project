@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { authContext } from "../provider/AuthProvider";
 
-
 const Login = () => {
     const { loginUser, setUser } = useContext(authContext);
     const [error, setError] = useState({});
