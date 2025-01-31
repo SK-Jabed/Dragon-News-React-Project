@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import SingleNewsCard from "../components/SingleNewsCard";
 
-
 const CategoryNews = () => {
     const { data: news } = useLoaderData();
 
